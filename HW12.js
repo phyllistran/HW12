@@ -211,7 +211,7 @@ var strings = ['this','is','a','collection','of','words'];
 
 var customers = [
     { firstname : 'Joe', lastname : 'Blogs'},
-    { firstname : 'John', lastname : 'Smith'},
+    { firstname : 'Jab', lastname : 'Zmith'},
     { firstname : 'Dave', lastname : 'Jones'},
     { firstname : 'Jack', lastname : 'White'}
 ];
@@ -230,19 +230,19 @@ var projections = customers
 		}
      })
     .map(function(c){
-    	return { name : c };
+    	return c.firstname + " " + c.lastname;
     })
 
+
+// SORT STILL NEEDS WORK
     .sort(sortByName);
     
-
 function sortByName(c1, c2) {
     "use strict";
-
-
-
-
-
+    if(c1.firstname < c2.firstname) return -1;
+    if(c1.firstname > c2.firstname) return 1;
+    return 1
+    return 0
 
 }
 
